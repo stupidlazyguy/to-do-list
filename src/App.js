@@ -57,7 +57,22 @@ class App extends React.Component{
                         <input type="radio" id="other" name="gender" value="other" onClick={this.onGender}/>
                           <label htmlFor="other">Other</label><br/>
                       <textarea rows="10" cols="30" name="textarea" onChange={this.onHandleChange}></textarea>
-                  </div>                   
+                  </div>  
+                  
+                  <div className="form-group">
+                    <div className="checkbox">
+                      <label>
+                        <input 
+                          type="checkbox"
+                          name="check"
+                          value={true}
+                          // checked = {true}
+                        />
+                        Trạng thái
+                      </label>
+                    </div>
+                  </div>                
+                  
                   </div>
                   <button type="submit" className="btn btn-primary mr-2">SUBMIT</button>
                   <button type="reset" className="btn btn-outline-info">RESET</button>
