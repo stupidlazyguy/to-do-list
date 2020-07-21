@@ -1,0 +1,20 @@
+ constructor(props) {
+        super(props)
+        this.state = {
+            txtSearch: 'default',
+            status: 'true',
+            filterName: 'default',
+            filterStatus: 0
+        }
+    }
+    onHandleChange = (event) => {
+        var target = event.target
+        var name = target.name
+        var value = target.value
+        this.setState({ [name]: value })
+        // console.log(this.state)
+    }
+    onSubmitFrom = (event) => {
+        event.preventDefault()
+        console.log(this.state)
+    }
