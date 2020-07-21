@@ -7,3 +7,8 @@
     padding-top:10px;
     padding-left: 10px;
 }
+.sort_selected{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+}
