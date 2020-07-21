@@ -27,9 +27,9 @@ class App extends React.Component {
                 <div className="text-center">
                     <h1>Quản lý công việc</h1>
                 </div>
-                <div className="row">
+                <div className="row ">
 
-                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3">
                         <div className="card">
                             <div className="card-header bg-warning header-box">
                                 <h5 className="card-title">
@@ -161,12 +161,29 @@ class App extends React.Component {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="text-center">1</td>
+                                            <td className="text-center"><div className="mt-2">1</div></td>
                                             <td>
                                                 <div className="mt-2">Lập trình Web</div>
                                             </td>
                                             <td className="text-center ">
-                                                <span className="badge badge-danger mt-2">Kích Hoạt</span>
+                                                <span className="badge badge-success mt-2">Kích Hoạt</span>
+                                            </td>
+                                            <td className="text-center">
+                                                <button className="btn btn-info mr-2">
+                                                    <span className="fa fa-pencil "></span>Sửa
+                                                </button>
+                                                <button className="btn btn-info mr-2">
+                                                    <span className="fa fa-trash "></span>Xóa
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="text-center"><div className="mt-2">2</div></td>
+                                            <td>
+                                                <div className="mt-2">Lập trình hướng đối tượng</div>
+                                            </td>
+                                            <td className="text-center ">
+                                                <span className="badge badge-danger mt-2">Ẩn</span>
                                             </td>
                                             <td className="text-center">
                                                 <button className="btn btn-info mr-2">
