@@ -8,25 +8,41 @@ import TodoLists from './Components/TodoLists'
 import TodoHeading from './Components/TodoHeading'
 import TodoMenu from './Components/TodoMenu'
 class App extends React.Component {
-   
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //         txtSearch: 'default',
+    //         status: 'true',
+    //         filterName: 'default',
+    //         filterStatus: 0
+    //     }
+    // }
+    componentDidMount(){
+        // console.log(this.state)
+    }
+    renderTodo = (todo) => {
+        this.setState(todo,()=>{
+            console.log(this.state)
+        })
+    }
     render() {
         return (
             <div className="container">
-                <Heading/>
+                <Heading />
                 <div className="row ">
                     <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3">
-                       <AddTodoList/>
+                        <AddTodoList  getTodo={this.renderTodo}/>
                     </div>
                     <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                        <AddButton/>
+                        <AddButton />
                         <div className="row ">
                             {/* Search */}
                             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <Search/>
+                                <Search />
                             </div>
                             {/* Sort */}
                             <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <Sort/>
+                                <Sort />
                             </div>
                         </div>
                         <div className="row mt-3">
@@ -34,24 +50,20 @@ class App extends React.Component {
                                 <table className="table table-bordered table-hover">
                                     <thead>
                                         {/* Heading Table */}
-                                       <TodoHeading/>
+                                        <TodoHeading />
                                     </thead>
                                     <tbody>
                                         {/* Menu of heading */}
-                                        <TodoMenu/>
+                                        <TodoMenu />
                                         {/* List do do */}
                                         {/* List of menu to do list  */}
-                                        <TodoLists/> 
-                                        <TodoLists/>
+                                        <TodoLists setTodo={this.state}/>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         )
     }

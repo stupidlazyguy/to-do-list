@@ -3,7 +3,23 @@ import React from 'react'
 
 
 class AddTodoList extends React.Component{
-
+    constructor(props){
+        super(props)
+        this.state = {
+            name:'default',
+            status:true
+        }
+    }
+    onHandleChange = (event) => {
+        var target = event.target
+        var name = target.name
+        var value = target.value
+        this.setState({ [name]: value })
+    }
+    onSubmitFrom = (event) => {
+        event.preventDefault()
+        this.props.getTodo(this.state)
+    }
     render(){
         return( <div className="card">
         <div className="card-header bg-warning header-box">
@@ -37,7 +53,7 @@ class AddTodoList extends React.Component{
                         <button type="submit" className="btn btn-primary">
                             <span className="fa fa-plus mr-1"></span> Lưu lại
                             </button>&nbsp;
-                            <button type="button" className="btn btn-outline-primary">
+                            <button type="reset" className="btn btn-outline-primary">
                             <span className="fa fa-close"></span> Hủy bỏ
                             </button>&nbsp;
                         </div>

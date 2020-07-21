@@ -6,7 +6,7 @@ class Todo extends React.Component{
         return(<tr>
             <td className="text-center"><div className="mt-2">1</div></td>
             <td>
-                <div className="mt-2">Lập trình Web</div>
+                <div className="mt-2">{this.props.todo}</div>
             </td>
             <td className="text-center ">
                 <span className="badge badge-success mt-2">Kích Hoạt</span>
