@@ -30,7 +30,7 @@ class App extends React.Component {
             <div className="container">
                 <Heading />
                 <div className="row ">
-                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3">
+                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3 AddTodoList">
                         <AddTodoList  getTodo={this.renderTodo}/>
                     </div>
                     <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">

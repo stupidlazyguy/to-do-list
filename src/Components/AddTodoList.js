@@ -26,7 +26,7 @@ class AddTodoList extends React.Component{
             <h5 className="card-title">
                 Thêm công việc
                     <span
-                    className="fa fa-times-circle float-right mr-3"
+                    className="fa fa-times-circle float-right mr-3 hiddenAdd"
                 ></span>
             </h5>
         </div>
