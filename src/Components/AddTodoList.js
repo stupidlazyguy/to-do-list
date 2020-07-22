@@ -7,7 +7,7 @@ class AddTodoList extends React.Component{
         super(props)
         this.state = {
             name:'default',
-            status:true
+            status:'true'
         }
     }
     onHandleChange = (event) => {

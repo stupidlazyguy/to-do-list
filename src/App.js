@@ -10,16 +10,18 @@ import TodoMenu from './Components/TodoMenu'
 class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {todo:['Tin Học Căn Bản','Lập trình Web','Cơ sỡ dữ liệu','Lý thuyết đồ thị']}
-    }
-    componentDidMount(){
-        // console.log(this.state)
+        this.state = {todo:[
+            {name:'Tin Học Căn Bản',status:'true'},
+            {name:'Lập trình Web',status:'false'},
+            {name:'Cơ sỡ dữ liệu',status:'true'},
+            {name:'Lý thuyết đồ thị',status:'false'}
+        ]}
     }
     renderTodo = (todo) => {
-        let addtodo = this.state
-        addtodo.todo.push(todo.name)
+        let addtodo = this.state.todo
+        addtodo.push(todo)
         this.setState(addtodo)
-        console.log(addtodo)
+        console.log(this.state.todo)
     }
     render() {
         return (
@@ -49,11 +51,11 @@ class App extends React.Component {
                                         <TodoHeading />
                                     </thead>
                                     <tbody>
-                                        {/* Menu of heading */}
-                                        <TodoMenu />
-                                        {/* List do do */}
-                                        {/* List of menu to do list  */}
-                                        <TodoLists setTodo={this.state.todo}/>
+                                    {/* Menu of heading */}
+                                    <TodoMenu />
+                                    {/* List do do */}
+                                    {/* List of menu to do list  */}
+                                    <TodoLists setTodo={this.state.todo}/>
                                     </tbody>
                                 </table>
                             </div>
