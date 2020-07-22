@@ -8,22 +8,18 @@ import TodoLists from './Components/TodoLists'
 import TodoHeading from './Components/TodoHeading'
 import TodoMenu from './Components/TodoMenu'
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //         txtSearch: 'default',
-    //         status: 'true',
-    //         filterName: 'default',
-    //         filterStatus: 0
-    //     }
-    // }
+    constructor(props) {
+        super(props)
+        this.state = {todo:['Tin Học Căn Bản','Lập trình Web','Cơ sỡ dữ liệu','Lý thuyết đồ thị']}
+    }
     componentDidMount(){
         // console.log(this.state)
     }
     renderTodo = (todo) => {
-        this.setState(todo,()=>{
-            console.log(this.state)
-        })
+        let addtodo = this.state
+        addtodo.todo.push(todo.name)
+        this.setState(addtodo)
+        console.log(addtodo)
     }
     render() {
         return (
@@ -57,7 +53,7 @@ class App extends React.Component {
                                         <TodoMenu />
                                         {/* List do do */}
                                         {/* List of menu to do list  */}
-                                        <TodoLists setTodo={this.state}/>
+                                        <TodoLists setTodo={this.state.todo}/>
                                     </tbody>
                                 </table>
                             </div>
