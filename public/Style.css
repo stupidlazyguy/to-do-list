@@ -31,3 +31,7 @@
 .icon-edit-title{
     text-align: center;
 }
+
+.EditButton{
+    display:none;
+}

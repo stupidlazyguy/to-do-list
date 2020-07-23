@@ -21,7 +21,8 @@ class App extends React.Component {
     renderTodo = (todo) => {
         let addtodo = this.state.todo
         addtodo.push(todo)
-        this.setState(addtodo)
+        this.setState(addtodo,()=>{
+        })
         // console.log(this.state.todo)
     }
     render() {
@@ -62,7 +63,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3">
+                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3 EditButton">
                         <EditTodo/>
                     </div>
                 </div>

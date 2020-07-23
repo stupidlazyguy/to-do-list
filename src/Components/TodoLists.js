@@ -6,7 +6,7 @@ class TodoLists extends React.Component{
     renderTodo=()=>{
         let Todos = this.props.setTodo
         return Todos.map(function(value,index){
-            console.log(<Todo todo={value} key={index} count={index}/>)
+            // console.log(<Todo todo={value} key={index} count={index}/>)
             return <Todo todo={value} key={index} count={index}/>
         })
     }

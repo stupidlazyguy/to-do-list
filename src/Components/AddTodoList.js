@@ -6,7 +6,7 @@ class AddTodoList extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            name:'default',
+            name:'',
             status:'true'
         }
     }
@@ -18,6 +18,7 @@ class AddTodoList extends React.Component{
     }
     onSubmitFrom = (event) => {
         event.preventDefault()
+        if(this.state.name === '' || this.state.status === '') return ;
         this.props.getTodo(this.state)
     }
     render(){
