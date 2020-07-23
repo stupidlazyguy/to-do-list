@@ -7,6 +7,7 @@ import Sort from './Components/Sort'
 import TodoLists from './Components/TodoLists'
 import TodoHeading from './Components/TodoHeading'
 import TodoMenu from './Components/TodoMenu'
+import EditTodo from './Components/EditTodo'
 class App extends React.Component {
     constructor(props) {
         super(props)
@@ -21,7 +22,7 @@ class App extends React.Component {
         let addtodo = this.state.todo
         addtodo.push(todo)
         this.setState(addtodo)
-        console.log(this.state.todo)
+        // console.log(this.state.todo)
     }
     render() {
         return (
@@ -51,15 +52,18 @@ class App extends React.Component {
                                         <TodoHeading />
                                     </thead>
                                     <tbody>
-                                    {/* Menu of heading */}
+                                        {/* Menu of heading */}
                                     <TodoMenu />
-                                    {/* List do do */}
-                                    {/* List of menu to do list  */}
+                                        {/* List do do */}
+                                        {/* List of menu to do list  */}
                                     <TodoLists setTodo={this.state.todo}/>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                    </div>
+                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 mt-3">
+                        <EditTodo/>
                     </div>
                 </div>
             </div>

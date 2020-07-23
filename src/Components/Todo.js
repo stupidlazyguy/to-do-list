@@ -2,11 +2,11 @@ import React from 'react'
 
 
 class Todo extends React.Component{
-    constructor(props){
-        super(props)
-        console.log(props.todo.status)
-        console.log(props.todo.status.constructor)
-    }
+    // constructor(props){
+    //     super(props)
+    //     console.log(props.todo.status)
+    //     console.log(props.todo.status.constructor)
+    // }
     render(){
         return(<tr>
             <td className="text-center"><div className="mt-2">{this.props.count+1}</div></td>

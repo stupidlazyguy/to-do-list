@@ -2,6 +2,7 @@ $('document').ready(()=>{
     let AddTodoList = $('.AddTodoList')
     let hiddenAdd = $(".hiddenAdd")
     hiddenAdd.css('cursor','pointer')
+    hiddenAdd.ready(()=>AddTodoList.css('display',"none"))
     let showAdd = $('.showAdd')
     showAdd.css('cursor','pointer')
     hiddenAdd.click(()=>AddTodoList.css('display',"none"))

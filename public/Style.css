@@ -12,3 +12,22 @@
     width: 100px;
     background-color: orange;
 }
+
+.edit-box{
+    padding:0px;
+    padding-top:10px;
+    padding-left:10px;
+}
+
+.icon-edit{
+    padding: 0px;
+    padding-bottom:10px;
+    float: left;
+    margin-right: 10px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.icon-edit-title{
+    text-align: center;
+}
