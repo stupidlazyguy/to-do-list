@@ -2,7 +2,6 @@ import React from 'react'
 import Todo from './Todo'
 
 class TodoLists extends React.Component{
-    
     renderTodo=()=>{
         let Todos = this.props.setTodo
         return Todos.map(function(value,index){

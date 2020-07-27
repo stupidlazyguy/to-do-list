@@ -4,6 +4,9 @@ class Todo extends React.Component{
     Edit=()=>{
         // alert(this.props.todo.name)
     }
+    componentDidMount(){
+        console.log("component did mount")
+    }
     render(){
         return(<tr>
             <td className="text-center"><div className="mt-2">{this.props.count+1}</div></td>
